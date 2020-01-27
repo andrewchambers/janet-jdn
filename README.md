@@ -12,9 +12,9 @@ Janet data notation, A set convenience wrappers around the janet parser api.
 (jdn/decode "")
 @[]
 (jdn/decode "a b c")
-@['a 'b 'c]
-(jdn/decode "'a 'b")
-'a
+@[a b c]
+(jdn/decode-one "a b")
+a
 (jdn/decode-one "nil")
 nil
 ```
