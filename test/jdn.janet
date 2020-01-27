@@ -1,13 +1,13 @@
 (import ../jdn)
 
-# decode
-(assert (deep= (jdn/decode (jdn/encode @{})) @[@{}]))
-(assert (deep= (jdn/decode "") @[]))
-(assert (deep= (jdn/decode ":a b") @[:a 'b]))
+# decode-values
+(assert (deep= (jdn/decode-values (jdn/encode @{})) @[@{}]))
+(assert (deep= (jdn/decode-values "") @[]))
+(assert (deep= (jdn/decode-values ":a b") @[:a 'b]))
 
-# decode-one
-(assert (deep= (jdn/decode-one (jdn/encode "")) ""))
-(assert (deep= (jdn/decode-one (jdn/encode nil)) nil))
-(assert (deep= (jdn/decode-one "a b c") 'a))
-(assert (match (protect (jdn/decode-one "")) [false _] true))
+# decode
+(assert (deep= (jdn/decode (jdn/encode "")) ""))
+(assert (deep= (jdn/decode (jdn/encode nil)) nil))
+(assert (deep= (jdn/decode "a b c") 'a))
+(assert (match (protect (jdn/decode "")) [false _] true))
 
