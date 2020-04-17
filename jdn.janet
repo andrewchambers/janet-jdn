@@ -4,7 +4,7 @@
   (string/format "%j" j))
 
 (defn decode
-  "Decode a string of buffer returning
+  "Decode a string or buffer returning
    a single janet value. Trailing values
    are discarded. Panics on parse error."
   [b]
@@ -18,7 +18,7 @@
   (parser/produce p))
 
 (defn decode-values
-  "Decode a string of buffer into zero
+  "Decode a string or buffer into zero
    or more janet values. Panics on parse error."
   [b]
   (def v @[])
