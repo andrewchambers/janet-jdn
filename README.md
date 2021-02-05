@@ -1,6 +1,6 @@
 # jdn
 
-Janet data notation, A set convenience wrappers around the janet parser api.
+Janet data notation. A set of convenience wrappers around the Janet parser api.
 
 # Quick Examples
 
