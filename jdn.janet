@@ -1,6 +1,7 @@
 
-(defn encode [j]
+(defn encode
   "Encode a janet value to a jdn string."
+  [j]
   (string/format "%j" j))
 
 (defn decode
